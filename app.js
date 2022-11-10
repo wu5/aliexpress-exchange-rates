@@ -8,7 +8,7 @@ const app = express();
 
 async function getData() {
 	const scrapedData = [];
-	const tableHeaders = ['date', 'bank', 'ali_ru', 'ali_com', 'gearbest', 'geekbuying', 'banggood'];
+	const tableHeaders = ['date', 'bank', 'ali_ru', 'ali_com', 'gearbest', 'geekbuying', 'banggood', 'dx', 'shein', 'joom'];
 	const url = "https://helpix.ru/currency/";
 
 	await axios.get(url).then(({ data }) => { 
