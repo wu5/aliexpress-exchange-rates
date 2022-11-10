@@ -2,6 +2,8 @@ const axios = require('axios');
 const cheerio = require('cheerio'); 
 const express = require("express");
 
+const port = process.env.PORT || 80;
+
 const app = express();
 
 async function getData() {
@@ -43,6 +45,6 @@ app.get("/", async (req, res) => {
 	}
   });
   
-  app.listen(8080, () =>
-  console.log(`The server is active and running on port 80`)
+  app.listen(port, () =>
+  console.log(`The server is active and running on port ${port}!`)
   );
