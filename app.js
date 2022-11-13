@@ -24,7 +24,7 @@ async function getData() {
 	  });
   
 	  for (let key in scrapedData[1]) {
-		if (scrapedData[1][key] == '-')
+		if (scrapedData[1][key] == '-' || scrapedData[1][key] == '')
 			scrapedData[1][key] = scrapedData[2][key];
 		if (key != 'date') 
 			scrapedData[1][key] = Number(scrapedData[1][key]);
